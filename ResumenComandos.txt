@@ -1,0 +1,1094 @@
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT/repositorioprueba (styled)
+$ cd ..
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT
+$ cd ..
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~
+$ mkdir TESTGIT2
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~
+$ cd TESTGIT2
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2
+$ ls
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2
+$ mkdir PruebaGIT2
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2
+$ cd PruebaGIT2
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2
+$ git init
+Initialized empty Git repository in C:/Users/Usuario/TESTGIT2/PruebaGIT2/.git/
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git remote add origin https://github.com/VictorReyesValbuena/PruebaGIT2.git
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ nano git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git add git-nuestro.md
+warning: in the working copy of 'git-nuestro.md', LF will be replaced by CRLF the next time Git touches it
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git commit -m "Añado el archivo git-nuestro.md"
+[master (root-commit) 9a1bf9d] Añado el archivo git-nuestro.md
+ 1 file changed, 12 insertions(+)
+ create mode 100644 git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 483 bytes | 483.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/VictorReyesValbuena/PruebaGIT2.git
+ * [new branch]      master -> master
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git branch styled
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git branch
+* master
+  styled
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git checkout styled
+Switched to branch 'styled'
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ git branch
+  master
+* styled
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ nano git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ git add git-nuestro.md
+warning: in the working copy of 'git-nuestro.md', LF will be replaced by CRLF the next time Git touches it
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ git commit -m "Añado primer modificación del archivo git-nuestro.md"
+[styled 826f515] Añado primer modificación del archivo git-nuestro.md
+ 1 file changed, 9 insertions(+), 10 deletions(-)
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ git push origin styled
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 544 bytes | 544.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'styled' on GitHub by visiting:
+remote:      https://github.com/VictorReyesValbuena/PruebaGIT2/pull/new/styled
+remote:
+To https://github.com/VictorReyesValbuena/PruebaGIT2.git
+ * [new branch]      styled -> styled
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ git reflog
+826f515 (HEAD -> styled, origin/styled) HEAD@{0}: commit: Añado primer modificación del archivo git-nuestro.md
+9a1bf9d (origin/master, master) HEAD@{1}: checkout: moving from master to styled
+9a1bf9d (origin/master, master) HEAD@{2}: commit (initial): Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$  git reset --hard HEAD~1
+HEAD is now at 9a1bf9d Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ git reflog
+9a1bf9d (HEAD -> styled, origin/master, master) HEAD@{0}: reset: moving to HEAD~1
+826f515 (origin/styled) HEAD@{1}: commit: Añado primer modificación del archivo git-nuestro.md
+9a1bf9d (HEAD -> styled, origin/master, master) HEAD@{2}: checkout: moving from master to styled
+9a1bf9d (HEAD -> styled, origin/master, master) HEAD@{3}: commit (initial): Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ git log
+commit 9a1bf9db537629897d127dea45bcf8271d4e1b08 (HEAD -> styled, origin/master, master)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:31:04 2026 +0100
+
+    Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ git reset --hard 826f515
+HEAD is now at 826f515 Añado primer modificación del archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ git log
+commit 826f5152d567477f38e1d2c72efc8c3d91c0ed0b (HEAD -> styled, origin/styled)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:33:20 2026 +0100
+
+    Añado primer modificación del archivo git-nuestro.md
+
+commit 9a1bf9db537629897d127dea45bcf8271d4e1b08 (origin/master, master)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:31:04 2026 +0100
+
+    Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ git branch
+  master
+* styled
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ git merge master
+Already up to date.
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ git checkout master
+Switched to branch 'master'
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git branch htmlify
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git branch
+  htmlify
+* master
+  styled
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git checkout htmlify
+Switched to branch 'htmlify'
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (htmlify)
+$ nano git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (htmlify)
+$ git add git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (htmlify)
+$ git commit -m "Añado segunda mofificacion del archivo git-nuestro.md"
+[htmlify 1fcd83e] Añado segunda mofificacion del archivo git-nuestro.md
+ 1 file changed, 10 insertions(+), 11 deletions(-)
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (htmlify)
+$ git branch
+* htmlify
+  master
+  styled
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (htmlify)
+$ git checkout styled
+Switched to branch 'styled'
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ git merge htmlify
+Auto-merging git-nuestro.md
+CONFLICT (content): Merge conflict in git-nuestro.md
+Automatic merge failed; fix conflicts and then commit the result.
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled|MERGING)
+$ nano git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled|MERGING)
+$ git add git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled|MERGING)
+$ git commit -m "Resolvemos el conflicto quedándonos con el contenido de styled"
+[styled 85bed48] Resolvemos el conflicto quedándonos con el contenido de styled
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ git merge htmlify
+Already up to date.
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ git branch
+  htmlify
+  master
+* styled
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (styled)
+$ git checkout master
+Switched to branch 'master'
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git merge styled
+Updating 9a1bf9d..85bed48
+Fast-forward
+ git-nuestro.md | 19 +++++++++----------
+ 1 file changed, 9 insertions(+), 10 deletions(-)
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git branch
+  htmlify
+* master
+  styled
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git branch title
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git checjout title
+git: 'checjout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git checkout title
+Switched to branch 'title'
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (title)
+$ nano git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (title)
+$ git add git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (title)
+$ git commit -m "Añadimos el título final al archivo git-nuestro.md"
+[title be8ba2d] Añadimos el título final al archivo git-nuestro.md
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (title)
+$ git checkout master
+Switched to branch 'master'
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git log
+commit 85bed4863e96ed8721608763c953aa2ddcc3b5a8 (HEAD -> master, styled)
+Merge: 826f515 1fcd83e
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:42:06 2026 +0100
+
+    Resolvemos el conflicto quedándonos con el contenido de styled
+
+commit 1fcd83e2ce4c16d4970ddfa36fda5ec5b91cb3c8 (htmlify)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:39:58 2026 +0100
+
+    Añado segunda mofificacion del archivo git-nuestro.md
+
+commit 826f5152d567477f38e1d2c72efc8c3d91c0ed0b (origin/styled)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:33:20 2026 +0100
+
+    Añado primer modificación del archivo git-nuestro.md
+
+commit 9a1bf9db537629897d127dea45bcf8271d4e1b08 (origin/master)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:31:04 2026 +0100
+
+    Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git log graph
+fatal: ambiguous argument 'graph': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git log --graph
+*   commit 85bed4863e96ed8721608763c953aa2ddcc3b5a8 (HEAD -> master, styled)
+|\  Merge: 826f515 1fcd83e
+| | Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+| | Date:   Fri Feb 13 14:42:06 2026 +0100
+| |
+| |     Resolvemos el conflicto quedándonos con el contenido de styled
+| |
+| * commit 1fcd83e2ce4c16d4970ddfa36fda5ec5b91cb3c8 (htmlify)
+| | Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+| | Date:   Fri Feb 13 14:39:58 2026 +0100
+| |
+| |     Añado segunda mofificacion del archivo git-nuestro.md
+| |
+* | commit 826f5152d567477f38e1d2c72efc8c3d91c0ed0b (origin/styled)
+|/  Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+|   Date:   Fri Feb 13 14:33:20 2026 +0100
+|
+|       Añado primer modificación del archivo git-nuestro.md
+|
+* commit 9a1bf9db537629897d127dea45bcf8271d4e1b08 (origin/master)
+  Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+  Date:   Fri Feb 13 14:31:04 2026 +0100
+
+      Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git branch
+  htmlify
+* master
+  styled
+  title
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git merge --no-ff title
+hint: Waiting for your editor to close the file... unix2dos: converting file C:/Users/Usuario/TESTGIT2/PruebaGIT2/.git/MERGE_MSG to DOS format...
+dos2unix: converting file C:/Users/Usuario/TESTGIT2/PruebaGIT2/.git/MERGE_MSG to Unix format...
+Merge made by the 'ort' strategy.
+ git-nuestro.md | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git log
+commit 6f62343bf3dd18b6ba0eac56850a6ee0342ae9ec (HEAD -> master)
+Merge: 85bed48 be8ba2d
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:47:38 2026 +0100
+
+    Merge branch 'title'
+
+commit be8ba2d67f8a2a4c70617c6e4320ffaf11330889 (title)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:44:41 2026 +0100
+
+    Añadimos el título final al archivo git-nuestro.md
+
+commit 85bed4863e96ed8721608763c953aa2ddcc3b5a8 (styled)
+Merge: 826f515 1fcd83e
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:42:06 2026 +0100
+
+    Resolvemos el conflicto quedándonos con el contenido de styled
+
+commit 1fcd83e2ce4c16d4970ddfa36fda5ec5b91cb3c8 (htmlify)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:39:58 2026 +0100
+
+    Añado segunda mofificacion del archivo git-nuestro.md
+
+commit 826f5152d567477f38e1d2c72efc8c3d91c0ed0b (origin/styled)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:33:20 2026 +0100
+
+    Añado primer modificación del archivo git-nuestro.md
+
+commit 9a1bf9db537629897d127dea45bcf8271d4e1b08 (origin/master)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:31:04 2026 +0100
+
+    Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git reset HEAD~1
+Unstaged changes after reset:
+M       git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git log
+commit 85bed4863e96ed8721608763c953aa2ddcc3b5a8 (HEAD -> master, styled)
+Merge: 826f515 1fcd83e
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:42:06 2026 +0100
+
+    Resolvemos el conflicto quedándonos con el contenido de styled
+
+commit 1fcd83e2ce4c16d4970ddfa36fda5ec5b91cb3c8 (htmlify)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:39:58 2026 +0100
+
+    Añado segunda mofificacion del archivo git-nuestro.md
+
+commit 826f5152d567477f38e1d2c72efc8c3d91c0ed0b (origin/styled)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:33:20 2026 +0100
+
+    Añado primer modificación del archivo git-nuestro.md
+
+commit 9a1bf9db537629897d127dea45bcf8271d4e1b08 (origin/master)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:31:04 2026 +0100
+
+    Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git reset --hard HEAD
+HEAD is now at 85bed48 Resolvemos el conflicto quedándonos con el contenido de styled
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git log -- graph
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git log --graph
+*   commit 85bed4863e96ed8721608763c953aa2ddcc3b5a8 (HEAD -> master, styled)
+|\  Merge: 826f515 1fcd83e
+| | Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+| | Date:   Fri Feb 13 14:42:06 2026 +0100
+| |
+| |     Resolvemos el conflicto quedándonos con el contenido de styled
+| |
+| * commit 1fcd83e2ce4c16d4970ddfa36fda5ec5b91cb3c8 (htmlify)
+| | Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+| | Date:   Fri Feb 13 14:39:58 2026 +0100
+| |
+| |     Añado segunda mofificacion del archivo git-nuestro.md
+| |
+* | commit 826f5152d567477f38e1d2c72efc8c3d91c0ed0b (origin/styled)
+|/  Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+|   Date:   Fri Feb 13 14:33:20 2026 +0100
+|
+|       Añado primer modificación del archivo git-nuestro.md
+|
+* commit 9a1bf9db537629897d127dea45bcf8271d4e1b08 (origin/master)
+  Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+  Date:   Fri Feb 13 14:31:04 2026 +0100
+
+      Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git title
+git: 'title' is not a git command. See 'git --help'.
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git branch
+  htmlify
+* master
+  styled
+  title
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git branch -D title
+Deleted branch title (was be8ba2d).
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git branch
+  htmlify
+* master
+  styled
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git reflog
+85bed48 (HEAD -> master, styled) HEAD@{0}: reset: moving to HEAD
+85bed48 (HEAD -> master, styled) HEAD@{1}: reset: moving to HEAD~1
+6f62343 HEAD@{2}: merge title: Merge made by the 'ort' strategy.
+85bed48 (HEAD -> master, styled) HEAD@{3}: checkout: moving from title to master
+be8ba2d HEAD@{4}: commit: Añadimos el título final al archivo git-nuestro.md
+85bed48 (HEAD -> master, styled) HEAD@{5}: checkout: moving from master to title
+85bed48 (HEAD -> master, styled) HEAD@{6}: merge styled: Fast-forward
+9a1bf9d (origin/master) HEAD@{7}: checkout: moving from styled to master
+85bed48 (HEAD -> master, styled) HEAD@{8}: commit (merge): Resolvemos el conflicto quedándonos con el contenido de styled
+826f515 (origin/styled) HEAD@{9}: checkout: moving from htmlify to styled
+1fcd83e (htmlify) HEAD@{10}: commit: Añado segunda mofificacion del archivo git-nuestro.md
+9a1bf9d (origin/master) HEAD@{11}: checkout: moving from master to htmlify
+9a1bf9d (origin/master) HEAD@{12}: checkout: moving from styled to master
+826f515 (origin/styled) HEAD@{13}: reset: moving to 826f515
+9a1bf9d (origin/master) HEAD@{14}: reset: moving to HEAD~1
+826f515 (origin/styled) HEAD@{15}: commit: Añado primer modificación del archivo git-nuestro.md
+9a1bf9d (origin/master) HEAD@{16}: checkout: moving from master to styled
+9a1bf9d (origin/master) HEAD@{17}: commit (initial): Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git reset -hard 6f62343
+error: did you mean `--hard` (with two dashes)?
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git reset --hard 6f62343
+HEAD is now at 6f62343 Merge branch 'title'
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git reflog
+6f62343 (HEAD -> master) HEAD@{0}: reset: moving to 6f62343
+85bed48 (styled) HEAD@{1}: reset: moving to HEAD
+85bed48 (styled) HEAD@{2}: reset: moving to HEAD~1
+6f62343 (HEAD -> master) HEAD@{3}: merge title: Merge made by the 'ort' strategy.
+85bed48 (styled) HEAD@{4}: checkout: moving from title to master
+be8ba2d HEAD@{5}: commit: Añadimos el título final al archivo git-nuestro.md
+85bed48 (styled) HEAD@{6}: checkout: moving from master to title
+85bed48 (styled) HEAD@{7}: merge styled: Fast-forward
+9a1bf9d (origin/master) HEAD@{8}: checkout: moving from styled to master
+85bed48 (styled) HEAD@{9}: commit (merge): Resolvemos el conflicto quedándonos con el contenido de styled
+826f515 (origin/styled) HEAD@{10}: checkout: moving from htmlify to styled
+1fcd83e (htmlify) HEAD@{11}: commit: Añado segunda mofificacion del archivo git-nuestro.md
+9a1bf9d (origin/master) HEAD@{12}: checkout: moving from master to htmlify
+9a1bf9d (origin/master) HEAD@{13}: checkout: moving from styled to master
+826f515 (origin/styled) HEAD@{14}: reset: moving to 826f515
+9a1bf9d (origin/master) HEAD@{15}: reset: moving to HEAD~1
+826f515 (origin/styled) HEAD@{16}: commit: Añado primer modificación del archivo git-nuestro.md
+9a1bf9d (origin/master) HEAD@{17}: checkout: moving from master to styled
+9a1bf9d (origin/master) HEAD@{18}: commit (initial): Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git branch
+  htmlify
+* master
+  styled
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git log
+commit 6f62343bf3dd18b6ba0eac56850a6ee0342ae9ec (HEAD -> master)
+Merge: 85bed48 be8ba2d
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:47:38 2026 +0100
+
+    Merge branch 'title'
+
+commit be8ba2d67f8a2a4c70617c6e4320ffaf11330889
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:44:41 2026 +0100
+
+    Añadimos el título final al archivo git-nuestro.md
+
+commit 85bed4863e96ed8721608763c953aa2ddcc3b5a8 (styled)
+Merge: 826f515 1fcd83e
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:42:06 2026 +0100
+
+    Resolvemos el conflicto quedándonos con el contenido de styled
+
+commit 1fcd83e2ce4c16d4970ddfa36fda5ec5b91cb3c8 (htmlify)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:39:58 2026 +0100
+
+    Añado segunda mofificacion del archivo git-nuestro.md
+
+commit 826f5152d567477f38e1d2c72efc8c3d91c0ed0b (origin/styled)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:33:20 2026 +0100
+
+    Añado primer modificación del archivo git-nuestro.md
+
+commit 9a1bf9db537629897d127dea45bcf8271d4e1b08 (origin/master)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:31:04 2026 +0100
+
+    Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git log --graph
+*   commit 6f62343bf3dd18b6ba0eac56850a6ee0342ae9ec (HEAD -> master)
+|\  Merge: 85bed48 be8ba2d
+| | Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+| | Date:   Fri Feb 13 14:47:38 2026 +0100
+| |
+| |     Merge branch 'title'
+| |
+| * commit be8ba2d67f8a2a4c70617c6e4320ffaf11330889
+|/  Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+|   Date:   Fri Feb 13 14:44:41 2026 +0100
+|
+|       Añadimos el título final al archivo git-nuestro.md
+|
+*   commit 85bed4863e96ed8721608763c953aa2ddcc3b5a8 (styled)
+|\  Merge: 826f515 1fcd83e
+| | Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+| | Date:   Fri Feb 13 14:42:06 2026 +0100
+| |
+| |     Resolvemos el conflicto quedándonos con el contenido de styled
+| |
+| * commit 1fcd83e2ce4c16d4970ddfa36fda5ec5b91cb3c8 (htmlify)
+| | Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+| | Date:   Fri Feb 13 14:39:58 2026 +0100
+| |
+| |     Añado segunda mofificacion del archivo git-nuestro.md
+| |
+* | commit 826f5152d567477f38e1d2c72efc8c3d91c0ed0b (origin/styled)
+|/  Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+|   Date:   Fri Feb 13 14:33:20 2026 +0100
+|
+|       Añado primer modificación del archivo git-nuestro.md
+|
+* commit 9a1bf9db537629897d127dea45bcf8271d4e1b08 (origin/master)
+  Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+  Date:   Fri Feb 13 14:31:04 2026 +0100
+
+      Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git branch
+  htmlify
+* master
+  styled
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git branch -D htmlify
+Deleted branch htmlify (was 1fcd83e).
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git branch -D styled
+Deleted branch styled (was 85bed48).
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git branch
+* master
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git log
+commit 6f62343bf3dd18b6ba0eac56850a6ee0342ae9ec (HEAD -> master)
+Merge: 85bed48 be8ba2d
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:47:38 2026 +0100
+
+    Merge branch 'title'
+
+commit be8ba2d67f8a2a4c70617c6e4320ffaf11330889
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:44:41 2026 +0100
+
+    Añadimos el título final al archivo git-nuestro.md
+
+commit 85bed4863e96ed8721608763c953aa2ddcc3b5a8
+Merge: 826f515 1fcd83e
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:42:06 2026 +0100
+
+    Resolvemos el conflicto quedándonos con el contenido de styled
+
+commit 1fcd83e2ce4c16d4970ddfa36fda5ec5b91cb3c8
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:39:58 2026 +0100
+
+    Añado segunda mofificacion del archivo git-nuestro.md
+
+commit 826f5152d567477f38e1d2c72efc8c3d91c0ed0b (origin/styled)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:33:20 2026 +0100
+
+    Añado primer modificación del archivo git-nuestro.md
+
+commit 9a1bf9db537629897d127dea45bcf8271d4e1b08 (origin/master)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:31:04 2026 +0100
+
+    Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git push origin master
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.24 KiB | 1.24 MiB/s, done.
+Total 8 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/VictorReyesValbuena/PruebaGIT2.git
+   9a1bf9d..6f62343  master -> master
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git log
+commit 6f62343bf3dd18b6ba0eac56850a6ee0342ae9ec (HEAD -> master, origin/master)
+Merge: 85bed48 be8ba2d
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:47:38 2026 +0100
+
+    Merge branch 'title'
+
+commit be8ba2d67f8a2a4c70617c6e4320ffaf11330889
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:44:41 2026 +0100
+
+    Añadimos el título final al archivo git-nuestro.md
+
+commit 85bed4863e96ed8721608763c953aa2ddcc3b5a8
+Merge: 826f515 1fcd83e
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:42:06 2026 +0100
+
+    Resolvemos el conflicto quedándonos con el contenido de styled
+
+commit 1fcd83e2ce4c16d4970ddfa36fda5ec5b91cb3c8
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:39:58 2026 +0100
+
+    Añado segunda mofificacion del archivo git-nuestro.md
+
+commit 826f5152d567477f38e1d2c72efc8c3d91c0ed0b (origin/styled)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:33:20 2026 +0100
+
+    Añado primer modificación del archivo git-nuestro.md
+
+commit 9a1bf9db537629897d127dea45bcf8271d4e1b08
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:31:04 2026 +0100
+
+    Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git checkout 9a1bf9db537629897d127dea45bcf8271d4e1b08
+Note: switching to '9a1bf9db537629897d127dea45bcf8271d4e1b08'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 9a1bf9d Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 ((9a1bf9d...))
+$ git log
+commit 9a1bf9db537629897d127dea45bcf8271d4e1b08 (HEAD)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:31:04 2026 +0100
+
+    Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 ((9a1bf9d...))
+$ git checkout 6f62343bf3dd18b6ba0eac56850a6ee0342ae9ec
+Previous HEAD position was 9a1bf9d Añado el archivo git-nuestro.md
+HEAD is now at 6f62343 Merge branch 'title'
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 ((6f62343...))
+$ git log
+commit 6f62343bf3dd18b6ba0eac56850a6ee0342ae9ec (HEAD, origin/master, master)
+Merge: 85bed48 be8ba2d
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:47:38 2026 +0100
+
+    Merge branch 'title'
+
+commit be8ba2d67f8a2a4c70617c6e4320ffaf11330889
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:44:41 2026 +0100
+
+    Añadimos el título final al archivo git-nuestro.md
+
+commit 85bed4863e96ed8721608763c953aa2ddcc3b5a8
+Merge: 826f515 1fcd83e
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:42:06 2026 +0100
+
+    Resolvemos el conflicto quedándonos con el contenido de styled
+
+commit 1fcd83e2ce4c16d4970ddfa36fda5ec5b91cb3c8
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:39:58 2026 +0100
+
+    Añado segunda mofificacion del archivo git-nuestro.md
+
+commit 826f5152d567477f38e1d2c72efc8c3d91c0ed0b (origin/styled)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:33:20 2026 +0100
+
+    Añado primer modificación del archivo git-nuestro.md
+
+commit 9a1bf9db537629897d127dea45bcf8271d4e1b08
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:31:04 2026 +0100
+
+    Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 ((6f62343...))
+$ git tag inicial 9a1bf9db537629897d127dea45bcf8271d4e1b08
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 ((6f62343...))
+$ git tag styled 826f5152d567477f38e1d2c72efc8c3d91c0ed0b
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 ((6f62343...))
+$ git tag htmlify 1fcd83e2ce4c16d4970ddfa36fda5ec5b91cb3c8
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 ((6f62343...))
+$ git tag title 6f62343bf3dd18b6ba0eac56850a6ee0342ae9ec
+
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 ((title))
+$ git log
+commit 6f62343bf3dd18b6ba0eac56850a6ee0342ae9ec (HEAD, tag: title, origin/master, master)
+Merge: 85bed48 be8ba2d
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:47:38 2026 +0100
+
+    Merge branch 'title'
+
+commit be8ba2d67f8a2a4c70617c6e4320ffaf11330889
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:44:41 2026 +0100
+
+    Añadimos el título final al archivo git-nuestro.md
+
+commit 85bed4863e96ed8721608763c953aa2ddcc3b5a8
+Merge: 826f515 1fcd83e
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:42:06 2026 +0100
+
+    Resolvemos el conflicto quedándonos con el contenido de styled
+
+commit 1fcd83e2ce4c16d4970ddfa36fda5ec5b91cb3c8 (tag: htmlify)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:39:58 2026 +0100
+
+    Añado segunda mofificacion del archivo git-nuestro.md
+
+commit 826f5152d567477f38e1d2c72efc8c3d91c0ed0b (tag: styled, origin/styled)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:33:20 2026 +0100
+
+    Añado primer modificación del archivo git-nuestro.md
+
+commit 9a1bf9db537629897d127dea45bcf8271d4e1b08 (tag: inicial)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:31:04 2026 +0100
+
+    Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 ((title))
+$ git checkout htmlify
+Previous HEAD position was 6f62343 Merge branch 'title'
+HEAD is now at 1fcd83e Añado segunda mofificacion del archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 ((htmlify))
+$ git branch
+* (HEAD detached at htmlify)
+  master
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 ((htmlify))
+$ git checkout master
+Previous HEAD position was 1fcd83e Añado segunda mofificacion del archivo git-nuestro.md
+Switched to branch 'master'
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git push origin master
+Everything up-to-date
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git push origin master
+Everything up-to-date
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git log
+commit 6f62343bf3dd18b6ba0eac56850a6ee0342ae9ec (HEAD -> master, tag: title, origin/master)
+Merge: 85bed48 be8ba2d
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:47:38 2026 +0100
+
+    Merge branch 'title'
+
+commit be8ba2d67f8a2a4c70617c6e4320ffaf11330889
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:44:41 2026 +0100
+
+    Añadimos el título final al archivo git-nuestro.md
+
+commit 85bed4863e96ed8721608763c953aa2ddcc3b5a8
+Merge: 826f515 1fcd83e
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:42:06 2026 +0100
+
+    Resolvemos el conflicto quedándonos con el contenido de styled
+
+commit 1fcd83e2ce4c16d4970ddfa36fda5ec5b91cb3c8 (tag: htmlify)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:39:58 2026 +0100
+
+    Añado segunda mofificacion del archivo git-nuestro.md
+
+commit 826f5152d567477f38e1d2c72efc8c3d91c0ed0b (tag: styled, origin/styled)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:33:20 2026 +0100
+
+    Añado primer modificación del archivo git-nuestro.md
+
+commit 9a1bf9db537629897d127dea45bcf8271d4e1b08 (tag: inicial)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:31:04 2026 +0100
+
+    Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git push origin master
+Everything up-to-date
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git push origin origin/master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/VictorReyesValbuena/PruebaGIT2.git
+ * [new reference]   origin/master -> origin/master
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git push origin --deleted styled
+error: unknown option `deleted'
+usage: git push [<options>] [<repository> [<refspec>...]]
+
+    -v, --[no-]verbose    be more verbose
+    -q, --[no-]quiet      be more quiet
+    --[no-]repo <repository>
+                          repository
+    --[no-]all            push all branches
+    --[no-]branches       alias of --all
+    --[no-]mirror         mirror all refs
+    -d, --[no-]delete     delete refs
+    --[no-]tags           push tags (can't be used with --all or --branches or --mirror)
+    -n, --[no-]dry-run    dry run
+    --[no-]porcelain      machine-readable output
+    -f, --[no-]force      force updates
+    --[no-]force-with-lease[=<refname>:<expect>]
+                          require old value of ref to be at this value
+    --[no-]force-if-includes
+                          require remote updates to be integrated locally
+    --[no-]recurse-submodules (check|on-demand|no)
+                          control recursive pushing of submodules
+    --[no-]thin           use thin pack
+    --[no-]receive-pack <receive-pack>
+                          receive pack program
+    --[no-]exec <receive-pack>
+                          receive pack program
+    -u, --[no-]set-upstream
+                          set upstream for git pull/status
+    --[no-]progress       force progress reporting
+    --[no-]prune          prune locally removed refs
+    --no-verify           bypass pre-push hook
+    --verify              opposite of --no-verify
+    --[no-]follow-tags    push missing but relevant tags
+    --[no-]signed[=(yes|no|if-asked)]
+                          GPG sign the push
+    --[no-]atomic         request atomic transaction on remote side
+    -o, --[no-]push-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git push origin -- delete styled
+error: src refspec delete does not match any
+error: failed to push some refs to 'https://github.com/VictorReyesValbuena/PruebaGIT2.git'
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git fetch origin --prune
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git log
+commit 6f62343bf3dd18b6ba0eac56850a6ee0342ae9ec (HEAD -> master, tag: title, origin/master, origin/HEAD)
+Merge: 85bed48 be8ba2d
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:47:38 2026 +0100
+
+    Merge branch 'title'
+
+commit be8ba2d67f8a2a4c70617c6e4320ffaf11330889
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:44:41 2026 +0100
+
+    Añadimos el título final al archivo git-nuestro.md
+
+commit 85bed4863e96ed8721608763c953aa2ddcc3b5a8
+Merge: 826f515 1fcd83e
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:42:06 2026 +0100
+
+    Resolvemos el conflicto quedándonos con el contenido de styled
+
+commit 1fcd83e2ce4c16d4970ddfa36fda5ec5b91cb3c8 (tag: htmlify)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:39:58 2026 +0100
+
+    Añado segunda mofificacion del archivo git-nuestro.md
+
+commit 826f5152d567477f38e1d2c72efc8c3d91c0ed0b (tag: styled, origin/styled)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:33:20 2026 +0100
+
+    Añado primer modificación del archivo git-nuestro.md
+
+commit 9a1bf9db537629897d127dea45bcf8271d4e1b08 (tag: inicial)
+Author: Victor Reyes Valbuena <125911354+VictorReyesValbuena@users.noreply.github.com>
+Date:   Fri Feb 13 14:31:04 2026 +0100
+
+    Añado el archivo git-nuestro.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git branch
+* master
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git push origin -- delete htmlify
+error: src refspec delete does not match any
+error: failed to push some refs to 'https://github.com/VictorReyesValbuena/PruebaGIT2.git'
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ ^C
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git push --delete styled
+fatal: --delete doesn't make sense without any refs
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ ^C
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git push origin --delete styled
+To https://github.com/VictorReyesValbuena/PruebaGIT2.git
+ - [deleted]         styled
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git push origin master
+Everything up-to-date
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git push origin --tags
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/VictorReyesValbuena/PruebaGIT2.git
+ * [new tag]         htmlify -> htmlify
+ * [new tag]         inicial -> inicial
+ * [new tag]         styled -> styled
+ * [new tag]         title -> title
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ nano readme.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        readme.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git add readme.md
+warning: in the working copy of 'readme.md', LF will be replaced by CRLF the next time Git touches it
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git commit -m "Añado el readme"
+[master 173c221] Añado el readme
+ 1 file changed, 3 insertions(+)
+ create mode 100644 readme.md
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 401 bytes | 401.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/VictorReyesValbuena/PruebaGIT2.git
+   6f62343..173c221  master -> master
+
+Usuario@DESKTOP-4EU34N4 MINGW64 ~/TESTGIT2/PruebaGIT2 (master)
