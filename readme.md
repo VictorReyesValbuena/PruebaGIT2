@@ -1,7 +1,8 @@
 # Primer contacto con GIT - GITHub	
 > **Stack:** `Git` | `Github`
 
-Repositorio de prueba para testear el funcionamiento de git
+Repositorio de prueba para testear el funcionamiento de git. El objetivo final ha sido subir un texto satírico con nombre
+*git-nuestro.md* dando ligeros rodeos para practicar e implementar las competencias que se definen a continuación:
 
 ## 🛠️ Resumen de Competencias en Git
 
